@@ -159,7 +159,7 @@ function createFood() {
     // Get details from local storage
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     const foods = JSON.parse(localStorage.getItem('foods'));
-    const foodDetails = foods.find(food => food.name === foodName);
+    const foodDetails = foods.find(food =>  food.name.toLowerCase() === foodName.toLowerCase());
 
     if (!currentUser) {
         displayMessage1('Please Login to log your food!', false);
@@ -407,3 +407,34 @@ function displayMacros(macros) {
 
 
 
+function showSuggestions() {
+    const input = document.getElementById('foodName');
+    const suggestionsContainer = document.getElementById('foodSuggestions');
+    const foods = JSON.parse(localStorage.getItem('foods'));
+    // Clear previous suggestions
+    suggestionsContainer.innerHTML = '';
+
+    // Get user input
+    const userInput = input.value.toLowerCase();
+
+    // Filter suggestions based on user input
+    const filteredSuggestions = foods.filter(food => food.name.toLowerCase().startsWith(userInput));
+
+    // Display suggestions
+    filteredSuggestions.forEach(suggestion => {
+        const suggestionDiv = document.createElement('div');
+        suggestionDiv.classList.add('suggestion');
+        suggestionDiv.textContent = suggestion.name;
+
+        // Set the selected suggestion when clicked
+        suggestionDiv.addEventListener('click', () => {
+            input.value = suggestion.name;
+            suggestionsContainer.style.display = 'none';
+        });
+
+        suggestionsContainer.appendChild(suggestionDiv);
+    });
+
+    // Show/hide suggestions container based on the number of suggestions
+    suggestionsContainer.style.display = filteredSuggestions.length > 0 ? 'block' : 'none';
+}
