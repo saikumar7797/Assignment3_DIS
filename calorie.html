@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">HealthyMe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calorie-tracker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Add a message area to display notifications -->
+                <div id="messageArea"></div>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="signupTitle">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body" id="login-form">
+                    <!-- Your login form goes here -->
+                    <form>
+                        <form id="authForm">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" required>
+
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" required>
+
+
+                            <button class="btn btn-primary btn-lg bg-success" href="#" role="button" id="loginBtn"
+                                onclick="logIn()">login</button>
+                            <button class="btn btn-primary btn-lg bg-success" id="signupBtn" href="#" role="button"
+                                onclick="signUp()">Signup</a>
+                                <button id ="not-user"class="btn btn-primary btn-sm bg-success" onclick="showSignup()"
+                                    role="button">not a user?
+                                    Signup here</button>
+                        </form>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Add a message area to display notifications -->
+
+    <!-- Create Food Form -->
+    <div class="create-food">
+
+        <h2>Log your Food!</h2>
+        <form>
+            <div id="messageArea1"></div>
+            <label for="foodName">Food Name:</label>
+            <input type="text" id="foodName" required>
+
+            <label for="mealSelect">Select Meal:</label>
+            <select id="mealSelect">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+            </select>
+
+            <button type="button" onclick="createFood()">Submit</button>
+        </form>
+    </div>
+
+
+    <!-- Foods list -->
+    <ul id="foodList"></ul>
+    <!-- Total Intake for the Day -->
+    <div id="totalIntake">
+
+        <canvas id="macrosChart" width="300" height="300"></canvas>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2023 HealthyMe. All rights reserved.</p>
+    </footer>
+
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script defer src="./index.js"></script>
+    <script>
+        window.addEventListener("load", displayFoods)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>HealthyMe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">HealthyMe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./calorie.html">Calorie-tracker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Add a message area to display notifications -->
+                <div id="messageArea"></div>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="signupTitle">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body" id="login-form">
+                    <!-- Your login form goes here -->
+                    <form>
+                        <form id="authForm">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" required>
+
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" required>
+
+
+                            <button class="btn btn-primary btn-lg bg-success" href="#" role="button" id="loginBtn"
+                                onclick="logIn()">login</button>
+                            <button class="btn btn-primary btn-lg bg-success" id="signupBtn" href="#" role="button"
+                                onclick="signUp()">Signup</a>
+                                <button id ="not-user"class="btn btn-primary btn-sm bg-success" onclick="showSignup()"
+                                    role="button">not a user?
+                                    Signup here</button>
+                        </form>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container faq pt-5 pb-5 mt-5">
+
+            <div class="row">
+                <div class="col pt-5">
+                    <div class="col pt-5">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="./assests/gridimage1.jpeg">
+                        </a>
+                    </div>
+                </div>
+                <div class="col pb-5 mb-5">
+                    <div class="Faqdetails">
+                        <h1><b>Lemon-Facts</b></h1>
+                        <p>The lemon (Citrus × limon) is a species of small evergreen tree in the flowering plant family
+                            Rutaceae, native to Asia, primarily Northeast India (Assam), Northern Myanmar, or China.
+
+                            The tree's ellipsoidal yellow fruit is used for culinary and non-culinary purposes
+                            throughout the world, primarily for its juice, which has both culinary and cleaning uses.
+                            The pulp and rind are also used in cooking and baking. The juice of the lemon is about 5-6%
+                            citric acid,with a pH of around, giving it a sour taste. The
+                            distinctive sour taste of lemon juice, derived from the citric acid, makes it a key
+                            ingredient in drinks and foods such as lemonade and lemon meringue pie.<br><br>
+                            1.Lemons are native to Asia. <br>
+                            2.Lemons are a hybrid between a sour orange and a citron.<br>
+                            3.Lemons are rich in vitamin C.<br>
+                            4.Lemons trees can produce up to 600lbs of lemons every year.<br>
+                            5.Lemon trees produce fruit all year round.<br>
+                            6.Lemon zest, grated rinds, is often used in baking.<br>
+                            7.Lemon tree leaves can be used to make tea.<br>
+                            8.The high acidity of lemons make them good cleaning aids.<br>
+                            9.California and Arizona produces most of the United States lemon crop.<br>
+                            10.The most common types of lemons are the Meyer, Eureka, and Lisbon lemons.</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2023 HealthyMe. All rights reserved.</p>
+        </footer>
+
+        <!-- Bootstrap JS and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script defer src="./index.js"></script>
+
+</body>
+
+</html>

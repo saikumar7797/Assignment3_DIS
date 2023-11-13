@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">HealthyMe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./calorie.html">Calorie-tracker</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Add a message area to display notifications -->
+                <div id="messageArea"></div>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="signupTitle">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body" id="login-form">
+                    <!-- Your login form goes here -->
+                    <form>
+                        <form id="authForm">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" required>
+
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" required>
+
+
+                            <button class="btn btn-primary btn-lg bg-success" href="#" role="button" id="loginBtn"
+                                onclick="logIn()">login</button>
+                            <button class="btn btn-primary btn-lg bg-success" id="signupBtn" href="#" role="button"
+                                onclick="signUp()">Signup</a>
+                                <button id="not-user" class="btn btn-primary btn-sm bg-success" onclick="showSignup()"
+                                    role="button">not a user?
+                                    Signup here</button>
+                        </form>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-5 pb-5">
+        <div>
+            <h1>About Project</h1>
+            <p>This comprehensive web application serves as a powerful tool for nutrition tracking. It boasts user
+                authentication, CRUD functionalities, and dynamic Chart.js visualizations. Users can seamlessly log in,
+                add,
+                edit, and delete foods, meals, and plans, with the macronutrient charts updating in real-time. The
+                polished
+                and user-friendly UI adapts intelligently based on the user's status, and local storage efficiently
+                manages
+                data storage. The application can be extended with additional features, including a hero section, image
+                links, an FAQ accordion, and a sleek Bootstrap footer. Its versatility makes it an ideal foundation for
+                health and nutrition-focused applications, offering a holistic approach to user engagement and data
+                management.</p>
+        </div>
+        <div class="pt-3">
+            <h1>About US</h1>
+            <p>This comprehensive web application serves as a powerful tool for nutrition tracking. It boasts user
+                authentication, CRUD functionalities, and dynamic Chart.js visualizations. Users can seamlessly log in,
+                add,
+                edit, and delete foods, meals, and plans, with the macronutrient charts updating in real-time. The
+                polished
+                and user-friendly UI adapts intelligently based on the user's status, and local storage efficiently
+                manages
+                data storage. The application can be extended with additional features, including a hero section, image
+                links, an FAQ accordion, and a sleek Bootstrap footer. Its versatility makes it an ideal foundation for
+                health and nutrition-focused applications, offering a holistic approach to user engagement and data
+                management.</p>
+        </div>
+
+        <div class="container p-3">
+            <h3>API data - https://www.nutritionix.com/business/api</h3>
+            <h3> Endpoints - https://trackapi.nutritionix.com/v2/natural/nutrients</h3>
+        </div>
+
+        <div class='container p-3 imgabout'>
+            <img src="./assests/ERD-diagram.png" alt="">
+        </div>
+
+
+        <div class="about-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>About us</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Jyothi Venkata naga sai kumar maturi</p>
+                            <p>Jmaturi@usf.edu</p>
+                        </td>
+                        <td>
+                            <p>I am Jyothi Venkata naga sai kumar maturi, a master's student at the University of South
+                                Florida
+                                studying business
+                                analytics and information systems. I worked on the page's concept and programming as its
+                                primary developer.
+                                and implemented search functionality along with responsiveness of the website.
+
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Nikhil Reddy kotwal</p>
+                            <p>nikhilreddykotwal@usf.edu</p>
+
+                        </td>
+                        <td>
+                            <p>I am Nikhil Reddy kotwal currently pursuing masters in Business analytics and Information
+                                systems from USF,
+                                Tampa. I worked on
+                                blog and about us page.I tested
+                                and deployed the code in the server.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Mohammed afeef shaik</p>
+                            <p>mshaik121@usf.edu</p>
+                        </td>
+                        <td>
+                            <p>I am Mohammed afeef shaik. Currently I am pursuing my masters in Business analytics and
+                                information systems. I have worked on calorie-tracking,
+                                page and made visualizations using ChartJS. </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Tarun velagada</p>
+                            <p>jtarunvelagada@usf.edu</p>
+                        </td>
+                        <td>
+                            <p>I am Tarun velagada, Majoring in business analytics and information systems. I worked on
+                                CSS styling for
+                                this website. I worked on home page ,landing page.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2023 HealthyMe. All rights reserved.</p>
+    </footer>
+
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        window.addEventListener("load", displayFoods)
+    </script>
+</body>
+
+</html>

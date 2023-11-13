@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>HealthyMe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">HealthyMe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./about.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./calorie.html">Calorie-tracker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Add a message area to display notifications -->
+                <div id="messageArea"></div>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="signupTitle">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body" id="login-form">
+                    <!-- Your login form goes here -->
+                    <form>
+                        <form id="authForm">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" required>
+
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" required>
+
+
+                            <button class="btn btn-primary btn-lg bg-success" href="#" role="button" id="loginBtn"
+                                onclick="logIn()">login</button>
+                            <button class="btn btn-primary btn-lg bg-success" id="signupBtn" href="#" role="button"
+                                onclick="signUp()">Signup</a>
+                                <button id ="not-user"class="btn btn-primary btn-sm bg-success" onclick="showSignup()"
+                                    role="button">not a user?
+                                    Signup here</button>
+                        </form>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="jumbotron text-center bg-success mb-0">
+        <div class="container">
+            <h1 class="display-4">HealthyMe</h1>
+            <p class="lead">Track. Transform. Thrive.</p>
+            <p class="lead">Your Journey to a Balanced Lifestyle</p>
+        </div>
+    </header>
+
+
+    <!-- Hero Image Section -->
+    <section class="hero-section">
+        <div class="hero-image">
+            <!-- Your hero image goes here -->
+        </div>
+        <div class="hero-content">
+            <h2>About Our Nutrition Website</h2>
+            <p>Our website is dedicated to providing you with the tools and resources you need to make informed
+                decisions about your nutrition. With a focus on tracking calories and macros, we help you achieve your
+                health and fitness goals.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="gallery-block grid-gallery">
+        <div class="container">
+            <div class="heading">
+                <h1 class="home-gallery-heading heading2">
+                    Explore Our Nutrition Blog
+                </h1>
+                <span class="home-gallery-sub-heading">
+                    Discover the world of healthy eating through our curated
+                    collection of images
+                </span>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox" href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage1.jpeg">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox"
+                        href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage2.jpeg">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox"
+                        href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage3.jpeg">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox"
+                        href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage4.jpeg">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox"
+                        href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage5.jpeg">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox"
+                        href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage6.jpeg">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox"
+                        href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage7.jpeg">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox"
+                        href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage8.jpeg">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="lightbox"
+                        href="./blog.html">
+                        <img class="img-fluid image scale-on-hover" src="./assests/gridimage9.jpeg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hero-section2">
+        <div class="container">
+            <div class="hero-content2">
+                <h1 class="display-4">Track Your Calorie Intake</h1>
+                <p class="lead">Stay on top of your nutrition goals with our calorie tracker.</p>
+                <a class="btn btn-primary bg-success btn-lg" href="#" role="button">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container faq pt-5 pb-5">
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="heading">
+                        <p>FAQ</p>
+                        <h1>
+                            Common questions
+                        </h1>
+                        <span class="home-gallery-sub-heading">
+                            Here are some of the most common questions that we get.
+                        </span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="Faqdetails">
+                        <p><b>What is the purpose of this website?</b></p>
+                        <p>The purpose of this website is to provide information and resources for nutrition and help
+                            users track their calorie and macro intake</p>
+                    </div>
+                    <div class="Faqdetails">
+                        <p><b>How can I track my calorie and macro intake?</b></p>
+                        <p>You can track your calorie and macro intake by using our calorie tracker page. Simply input
+                            the foods and quantities you consume, and the tracker will calculate your total calorie and
+                            macro intake.</p>
+                    </div>
+                    <div class="Faqdetails">
+                        <p><b>What is BMI?</b></p>
+                        <p>BMI stands for Body Mass Index. It is a measurement that uses your height and weight to
+                            determine if you are underweight, normal weight, overweight, or obese.</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2023 HealthyMe. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script defer src="./index.js"></script>
+
+</body>
+
+</html>

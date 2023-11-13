@@ -1,0 +1,217 @@
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+}
+
+#signupBtn{
+    display: none;
+}
+
+.create-food{
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.create-food h2 {
+    text-align: center;
+}
+
+#foodList{
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+
+  /* Add your custom styles for the hero section */
+.hero-section {
+    position: relative;
+    background-color: #f8f9fa; /* Set background color as needed */
+    padding: 50px 0; /* Adjust padding as needed */
+  }
+  
+  .hero-image {
+    background-image: url('./assests/hero.jpeg'); /* Set the path to your hero image */
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Set the desired height for the hero image */
+    position: relative;
+  }
+  
+  .hero-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Set text color as needed */
+    padding: 20px;
+  }
+  
+/* Add your custom styles for the image links section */
+.image-links-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0; /* Adjust margin as needed */
+  }
+  
+  .image-link {
+    width: calc(25% - 20px); /* 25% width with 20px margin between images */
+    margin: 10px;
+  }
+  
+  .image-link img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Add border or other styles as needed */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+  }
+  
+  /* Additional styles can be added based on your design requirements */
+  
+
+
+  .gallery-block.grid-gallery{
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+  
+  .gallery-block.grid-gallery .heading{
+      margin-bottom: 50px;
+      text-align: center;
+  }
+  
+  .gallery-block.grid-gallery .heading h2{
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+  }
+  
+  .gallery-block.grid-gallery a:hover{
+    opacity: 0.8;
+  }
+  
+  .gallery-block.grid-gallery .item img{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.4s;
+  }
+  
+  .gallery-block.grid-gallery .item{
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 576px) {
+  
+    .gallery-block.grid-gallery .scale-on-hover:hover{
+      transform: scale(1.05);
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+    }
+  }
+  .gallery-block.grid-gallery img {
+    width: 300px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    object-fit: cover;
+}
+  
+.hero-section2{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content2 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.hero-content2 .btn{
+    border: none;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Styling for success and error messages */
+#messageArea {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.success {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.error {
+    background-color: #f44336;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+.about-table {
+  display: flex;
+  align-items: center;
+  padding: 0% 8%;
+}
+
+.about-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.about-table th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.about-page {
+  padding: 20% 10% 10% 10%;
+  text-align: justify;
+}
+
+.about-page h2 {
+  text-decoration-line: underline;
+}
+
+.imgabout{
+
+  max-width: 200px;
+}
+@media (min-width: 576px) {
+  
+  .imgabout{
+
+    max-width: 500px;
+  }
+}
