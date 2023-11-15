@@ -97,7 +97,7 @@
                 health and nutrition-focused applications, offering a holistic approach to user engagement and data
                 management. <br>
                 The application leverages JSON data for storing food details, which will be replaced live APIs
-                Nutritionix to enhance data accuracy and coverage. The seamless incorporation of
+                FoodData Central API to enhance data accuracy and coverage. The seamless incorporation of
                 CRUD operations enables users to manage their nutrition plans effectively. The dynamic Chart.js
                 visualizations offer a clear representation of macronutrient intake, empowering users with insights into
                 their dietary habits.<br> <b> Features</b> <br>
@@ -120,8 +120,13 @@
 
 
         <div class="container p-3 about-links">
-            <p><b>API data</b> - https://www.nutritionix.com/business/api</p>
-            <p> <b>Endpoints</b> - https://trackapi.nutritionix.com/v2/natural/nutrients</p>
+            <p><b>API data-The FoodData Central API</b> - https://fdc.nal.usda.gov/api-guide.html#bkmk-6</p>
+            <p> <b>Endpoints</b> - <br>
+                /food/{fdcId} GET Fetches details for one food item by FDC ID<br>
+                /foods GET | POST Fetches details for multiple food items using input FDC IDs<br>
+                /foods/list GET | POST Returns a paged list of foods, in the 'abridged' format<br>
+                /foods/search GET | POST Returns a list of foods that matched search (query) keywords<br>
+            </p>
             <p> <b>Github </b> - https://github.com/saikumar7797/Assignment3_DIS</p>
 
         </div>
